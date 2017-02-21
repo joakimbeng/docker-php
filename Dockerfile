@@ -9,7 +9,7 @@ RUN DEBIAN_FRONTEND=noninteractive \
     apt-get install -y software-properties-common && \
     apt-get install -y gettext-base python-software-properties python g++ make && \
     apt-get install -y git vim curl wget libcurl4-gnutls-dev libxml2-dev libssh2-1-dev libjpeg62-turbo-dev libpng12-dev && \
-    docker-php-ext-install -j$(nproc) gd curl soap mysql pdo pdo_mysql && \
+    docker-php-ext-install -j$(nproc) gd curl soap mysql mysqli opcache pdo pdo_mysql sockets zip && \
     apt-get -y install snmp && \
     apt-get clean && \
     pecl install ssh2 && \
